@@ -100,24 +100,11 @@ Or copy the config from [`cursor/mcp-config.json`](cursor/mcp-config.json) into 
 
 ## Verify a Release
 
-All Covy plugin releases are signed with [cosign](https://github.com/sigstore/cosign) (keyless OIDC) and include [SLSA v1.1 build provenance](https://slsa.dev). To verify before installing:
+Each release ships a `covy-<version>-checksums.txt` file with SHA256 hashes for every artifact. After downloading, verify with:
 
-**Cosign signature:**
 ```bash
-cosign verify-blob \
-  --certificate-identity-regexp 'https://github.com/princi-ai/covy-plugin/.*' \
-  --certificate-oidc-issuer 'https://token.actions.githubusercontent.com' \
-  --certificate covy-v0.1.0.mcpb.crt \
-  --signature covy-v0.1.0.mcpb.sig \
-  covy-v0.1.0.mcpb
+sha256sum -c covy-v0.1.0-checksums.txt
 ```
-
-**SLSA build provenance:**
-```bash
-gh attestation verify covy-v0.1.0.mcpb --repo princi-ai/covy-plugin
-```
-
-Both should print verified / green attestation results.
 
 ---
 
