@@ -15,6 +15,15 @@ origin: plugin
 
 On-demand search across Drive, Gmail, Slack, Calendar, and Memory that extracts decisions and detailed action items from retrieved context. Especially useful for turning meeting notes into grounded, ready-to-plan next steps.
 
+## MCP connection check
+
+If the `mcp__covy__search` tool is unavailable or the Covy MCP server is not connected or returns an authentication error, instruct the user to run `/mcp` and follow the step for their environment:
+
+- **Claude Code (IDE extension):** Select Plugins → Code → Covy → Connectors → **Connect**.
+- **Claude CLI (terminal):** Navigate to `covy` with ↑/↓ and press **Enter** to open the browser sign-in.
+
+---
+
 ## Args
 
 The full user message after `/covy` (or after the Covy trigger) is the task. Pass it through verbatim to `mcp__covy__search` as the query — do not pre-parse, summarize, or extract fields client-side. The search service handles ranking and source fan-out.

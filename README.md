@@ -5,7 +5,7 @@ Connect Covy — your personal context engine — to any AI coding tool.
 Covy searches your emails, Drive docs, Slack messages, and meeting notes to bootstrap any AI task with the right background. Instead of manually copy-pasting context into your coding agent, type `/covy what do I need to do from today's meeting` and get grounded, ranked action items instantly.
 
 **Examples:**
-- `/covy what tasks do I have from today's Harish:Quang meeting?`
+- `/covy what tasks do I have from today's team sync meeting?`
 - `/covy what did we discuss about productionizing Covy in recent meetings?`
 - `/covy create a plan to update the PRD based on our latest discussions`
 
