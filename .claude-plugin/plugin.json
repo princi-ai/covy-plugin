@@ -6,5 +6,15 @@
   "repository": "https://github.com/princi-ai/covy-plugin",
   "homepage": "https://princi.ai",
   "license": "MIT",
-  "keywords": ["meeting notes", "action items", "meeting context", "personal context", "email search", "google drive", "slack", "knowledge retrieval"]
+  "keywords": ["meeting notes", "action items", "meeting context", "personal context", "email search", "google drive", "slack", "knowledge retrieval"],
+  "mcpServers": {
+    "covy": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote@latest",
+        "https://imyhlkntvqyznjdmzfjs.supabase.co/functions/v1/covy"
+      ]
+    }
+  }
 }
