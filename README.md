@@ -48,13 +48,9 @@ Covy searches your emails, Drive docs, Slack messages, and meeting notes to boot
 
 **Option A — Install as a Cursor plugin** (bundles the skill + MCP server):
 
-Local install while the plugin is unpublished:
+In Cursor, run `/add-plugin covy` — or browse [cursor.com/marketplace](https://cursor.com/marketplace) and install Covy from the listing.
 
-```bash
-git clone https://github.com/princi-ai/covy-plugin ~/.cursor/plugins/local/covy
-```
-
-Then restart Cursor (or run **Developer: Reload Window**). The Covy MCP server and skill register automatically from [.cursor-plugin/plugin.json](.cursor-plugin/plugin.json).
+Cursor registers the Covy MCP server and `/covy` skill automatically from [.cursor-plugin/plugin.json](.cursor-plugin/plugin.json). The first time you invoke a Covy tool, an OAuth browser flow opens to sign in to Princi.
 
 **Option B — MCP server only** (no plugin):
 
