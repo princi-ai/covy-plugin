@@ -46,13 +46,25 @@ Covy searches your emails, Drive docs, Slack messages, and meeting notes to boot
 
 ## Setup: Cursor
 
+**Option A — Install as a Cursor plugin** (bundles the skill + MCP server):
+
+Local install while the plugin is unpublished:
+
+```bash
+git clone https://github.com/princi-ai/covy-plugin ~/.cursor/plugins/local/covy
+```
+
+Then restart Cursor (or run **Developer: Reload Window**). The Covy MCP server and skill register automatically from [.cursor-plugin/plugin.json](.cursor-plugin/plugin.json).
+
+**Option B — MCP server only** (no plugin):
+
 1. Open Cursor → Settings → MCP
 2. Add a new MCP server with URL: `https://imyhlkntvqyznjdmzfjs.supabase.co/functions/v1/covy`
 3. Save and restart Cursor
 
-Auth uses OAuth auto-discovery when Cursor supports it. API-key fallback is available for older clients — contact Princi.
+Or copy the config from [cursor/mcp-config.json](cursor/mcp-config.json) into your Cursor MCP settings.
 
-Or copy the config from [`cursor/mcp-config.json`](cursor/mcp-config.json) into your Cursor MCP settings.
+Auth uses OAuth auto-discovery when Cursor supports it. API-key fallback is available for older clients — contact Princi.
 
 ---
 
