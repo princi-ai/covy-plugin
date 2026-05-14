@@ -1,6 +1,5 @@
 {
   "name": "covy-plugin",
-  "id": "covy",
   "owner": { "name": "Princi AI" },
   "plugins": [
     {
